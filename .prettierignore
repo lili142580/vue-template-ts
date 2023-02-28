@@ -1,0 +1,21 @@
+## OS  过滤规则
+.DS_Store
+.idea
+.editorconfig
+pnpm-lock.yaml
+.npmrc
+
+# Ignored suffix
+*.log
+*.md
+*.svg
+*.png
+*.ico
+*ignore
+
+## Local
+.husky
+
+## Built-files
+.cache
+dist

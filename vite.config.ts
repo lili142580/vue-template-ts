@@ -4,6 +4,7 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from "unplugin-auto-import/vite";
 import Components from "unplugin-vue-components/vite";
 import { viteMockServe } from "vite-plugin-mock"
+import eslintPlugin from 'vite-plugin-eslint'
 // https://vitejs.dev/config/
 export default defineConfig({
     base: "./",
@@ -13,6 +14,9 @@ export default defineConfig({
             dts: true,
             dirs: ["src/components"], // 按需加载的文件夹
         }),
+        eslintPlugin({
+            include: ['src/**/*.js', 'src/**/*.vue', 'src/*.js', 'src/*.vue']
+          }),
         AutoImport({
             imports: ["vue", "vue-router", "vuex"],
         }),
@@ -26,7 +30,9 @@ export default defineConfig({
     resolve: {
         alias: {
             "@src": resolve(__dirname, "./src"),
+            "@store": resolve(__dirname, "./src/store"),
         },
+        extensions: [".mjs", ".js", ".ts", ".jsx", ".tsx", ".json"]
     },
     server: {
         host: "0.0.0.0", //地址
