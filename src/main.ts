@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import Antd from 'ant-design-vue'
-import './style.css'
 import directive from './directive/index'
 import store from './store'
 import App from './App.vue'
