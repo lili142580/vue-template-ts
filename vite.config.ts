@@ -31,8 +31,11 @@ export default defineConfig({
 		alias: {
 			'@src': resolve(__dirname, './src'),
 			'@store': resolve(__dirname, './src/store'),
+			'@router': resolve(__dirname, './src/router'),
 			'@utils': resolve(__dirname, './src/utils'),
+			'@hooks': resolve(__dirname, './src/hooks'),
 			'@directive': resolve(__dirname, './src/directive/'),
+			
 		},
 		extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json'],
 	},

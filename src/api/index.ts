@@ -1,8 +1,10 @@
-import request from "@utils/request";
+import Axios from '@utils/request'
+import type { Login, config } from './type'
+const axios = new Axios({
+	// baseURL: import.meta.env.VITE_BASE_URL,
+	baseURL: '',
+})
 
-export const getTestAPI = () => {
-    return request({
-        url: '/api/test',
-        method: 'get'
-    })
+export const getLogin = (params: Login, config?: config) => {
+	return axios.instance.post('/api/login', params, config)
 }

@@ -17,7 +17,9 @@
 			"@src/*": ["src/*"],
 			"@store/*": ["src/store/*"],
 			"@utils/*": ["src/utils/*"],
-			"@directive/*": ["src/directive/*"]
+			"@directive/*": ["src/directive/*"],
+			"@router/*": ["src/router/*"],
+			"@hooks/*": ["src/hooks/*"]
 		}
 	},
 	"include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
